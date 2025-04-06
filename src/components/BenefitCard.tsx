@@ -9,11 +9,11 @@ interface BenefitCardProps {
 
 const BenefitCard = ({ title, description, icon }: BenefitCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md flex flex-col items-center text-center">
-      <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
+    <div className="artistic-card p-6 group hover:translate-y-[-5px] transition-all duration-500">
+      <div className="w-14 h-14 bg-gradient-to-br from-artistic-orange to-artistic-teal rounded-full flex items-center justify-center text-artistic-sand mb-4 group-hover:animate-pulse-soft">
         {icon}
       </div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
+      <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-artistic-navy to-artistic-teal bg-clip-text text-transparent">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
     </div>
   );

@@ -62,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Couleurs personnalisées basées sur l'image
+				artistic: {
+					blue: '#0D4D6C',
+					orange: '#EB6B1F',
+					teal: '#2A8C8C',
+					sand: '#F5E6C5',
+					navy: '#052E40',
+					rust: '#AB4016',
 				}
 			},
 			fontFamily: {
@@ -107,13 +116,68 @@ export default {
 					'50%': {
 						transform: 'scale(1.05)'
 					}
+				},
+				'geometric-shift': {
+					'0%': {
+						transform: 'rotate(0deg) scale(1)'
+					},
+					'25%': {
+						transform: 'rotate(1deg) scale(1.01)'
+					},
+					'50%': {
+						transform: 'rotate(0deg) scale(1)'
+					},
+					'75%': {
+						transform: 'rotate(-1deg) scale(0.99)'
+					},
+					'100%': {
+						transform: 'rotate(0deg) scale(1)'
+					}
+				},
+				'border-flow': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
+					}
+				},
+				'color-cycle': {
+					'0%': {
+						filter: 'hue-rotate(0deg) saturate(1)'
+					},
+					'50%': {
+						filter: 'hue-rotate(15deg) saturate(1.2)'
+					},
+					'100%': {
+						filter: 'hue-rotate(0deg) saturate(1)'
+					}
+				},
+				'text-shimmer': {
+					'0%': {
+						backgroundPosition: '-500% 0'
+					},
+					'100%': {
+						backgroundPosition: '500% 0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
-				'pulse-soft': 'pulse-soft 2s infinite ease-in-out'
+				'pulse-soft': 'pulse-soft 2s infinite ease-in-out',
+				'geometric-shift': 'geometric-shift 6s infinite ease-in-out',
+				'border-flow': 'border-flow 8s ease infinite',
+				'color-cycle': 'color-cycle 10s infinite ease-in-out',
+				'text-shimmer': 'text-shimmer 8s infinite linear'
+			},
+			backgroundImage: {
+				'gradient-artistic': 'linear-gradient(45deg, #0D4D6C, #2A8C8C, #EB6B1F, #0D4D6C)',
+				'geometric-pattern': "url('/lovable-uploads/13e355f9-0387-4f74-b40e-0444af06d550.png')",
 			}
 		}
 	},
