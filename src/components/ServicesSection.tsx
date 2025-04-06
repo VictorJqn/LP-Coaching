@@ -49,10 +49,10 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="bg-secondary py-16 md:py-24">
+    <section id="services" className="section-expressionist-2 textured-bg py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 reveal">
-          <span className="inline-block text-primary font-semibold mb-2">MES SERVICES</span>
+          <span className="inline-block text-primary font-semibold mb-2 bg-artistic-teal/10 px-3 py-1 rounded-md">MES SERVICES</span>
           <h2 className="section-title">Ce que je propose</h2>
           <p className="section-subtitle">
             Des solutions de coaching adaptées à vos besoins et à votre emploi du temps

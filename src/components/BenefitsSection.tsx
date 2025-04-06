@@ -25,7 +25,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-artistic-blue/5 via-white to-artistic-orange/5">
+    <section className="py-16 md:py-24 section-expressionist-1 textured-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 reveal">
           <span className="inline-block bg-artistic-teal text-artistic-sand font-semibold mb-2 px-3 py-1 rounded-md">MES AVANTAGES</span>

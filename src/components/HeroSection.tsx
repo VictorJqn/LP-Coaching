@@ -17,12 +17,9 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Glass overlay with geometric style */}
+      {/* Subtle overlay to enhance text visibility without blur */}
       <div 
-        className="absolute inset-0 z-10 bg-gradient-to-br from-artistic-navy/80 via-transparent to-artistic-blue/70"
-        style={{
-          backdropFilter: 'blur(2px)',
-        }}
+        className="absolute inset-0 z-10 bg-gradient-to-br from-artistic-navy/60 via-transparent to-artistic-blue/50"
       ></div>
 
       <div className="container relative z-20 mx-auto px-4 py-32 flex flex-col items-start">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="container-custom">
+    <section id="about" className="container-custom section-expressionist-3 textured-bg">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div className="reveal">
           <div className="relative">
@@ -11,14 +11,17 @@ const AboutSection = () => {
             <img
               src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
               alt="Portrait du coach sportif"
-              className="rounded-lg shadow-xl relative z-10 w-full max-w-md mx-auto"
+              className="rounded-lg shadow-xl relative z-10 w-full max-w-md mx-auto border-4 border-white"
+              style={{
+                boxShadow: "5px 5px 15px rgba(13, 77, 108, 0.3), -5px -5px 15px rgba(235, 107, 31, 0.2)",
+              }}
             />
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary rounded-full opacity-20"></div>
           </div>
         </div>
 
         <div className="reveal">
-          <span className="inline-block text-primary font-semibold mb-2">À PROPOS</span>
+          <span className="inline-block text-primary font-semibold mb-2 bg-artistic-orange/10 px-3 py-1 rounded-md">À PROPOS</span>
           <h2 className="section-title">Thomas Martin, votre coach sportif à Paris</h2>
           <p className="text-muted-foreground mb-6">
             Diplômé en sciences du sport et passionné depuis plus de 10 ans
@@ -44,20 +47,20 @@ const AboutSection = () => {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <div className="flex items-center">
-              <div className="mr-3 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+            <div className="flex items-center bg-white/70 p-3 rounded-lg shadow-sm">
+              <div className="mr-3 w-12 h-12 rounded-full bg-artistic-orange/20 flex items-center justify-center text-artistic-orange font-bold">
                 10+
               </div>
               <span className="text-sm">Années d'expérience</span>
             </div>
-            <div className="flex items-center">
-              <div className="mr-3 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+            <div className="flex items-center bg-white/70 p-3 rounded-lg shadow-sm">
+              <div className="mr-3 w-12 h-12 rounded-full bg-artistic-teal/20 flex items-center justify-center text-artistic-teal font-bold">
                 300+
               </div>
               <span className="text-sm">Clients satisfaits</span>
             </div>
-            <div className="flex items-center">
-              <div className="mr-3 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+            <div className="flex items-center bg-white/70 p-3 rounded-lg shadow-sm">
+              <div className="mr-3 w-12 h-12 rounded-full bg-artistic-blue/20 flex items-center justify-center text-artistic-blue font-bold">
                 100%
               </div>
               <span className="text-sm">Accompagnement suivi</span>

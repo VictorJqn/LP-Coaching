@@ -90,20 +90,23 @@ const Index = () => {
       <div className="fixed left-[5%] bottom-[20%] w-40 h-40 bg-artistic-orange/10 rounded-lg -rotate-12 blur-xl z-0 parallax-element" data-speed="0.05"></div>
       <div className="fixed right-[15%] bottom-[10%] w-24 h-24 bg-artistic-blue/10 rounded-lg rotate-45 blur-xl z-0 parallax-element" data-speed="0.04"></div>
       
-      <style jsx global>{`
-        .cursor-trail {
-          position: fixed;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(235,107,31,0.2) 0%, rgba(42,140,140,0.1) 70%, rgba(255,255,255,0) 100%);
-          transform: translate(-50%, -50%);
-          pointer-events: none;
-          z-index: 9999;
-          mix-blend-mode: screen;
-          transition: width 0.3s, height 0.3s, opacity 0.3s;
-        }
-      `}</style>
+      {/* Using standard style tag instead of jsx style */}
+      <style>
+        {`
+          .cursor-trail {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(235,107,31,0.2) 0%, rgba(42,140,140,0.1) 70%, rgba(255,255,255,0) 100%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen;
+            transition: width 0.3s, height 0.3s, opacity 0.3s;
+          }
+        `}
+      </style>
     </div>
   );
 };
