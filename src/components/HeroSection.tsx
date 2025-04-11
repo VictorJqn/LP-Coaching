@@ -11,7 +11,7 @@ const HeroSection = () => {
       {/* Background image with artistic pattern */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/13e355f9-0387-4f74-b40e-0444af06d550.png"
+          src="/lovable-uploads/7200454b-e672-42ef-ba44-64d3f55afb9c.png"
           alt="TAKE CONTROL"
           className="w-full h-full object-cover object-center"
         />
@@ -19,17 +19,17 @@ const HeroSection = () => {
 
       {/* Subtle overlay to enhance text visibility without blur */}
       <div 
-        className="absolute inset-0 z-10 bg-gradient-to-br from-artistic-navy/60 via-transparent to-artistic-blue/50"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-transparent via-transparent to-artistic-navy/70"
       ></div>
 
-      <div className="container relative z-20 mx-auto px-4 py-32 flex flex-col items-start">
-        <span className="bg-artistic-teal px-4 py-1 rounded-md text-artistic-sand text-sm font-semibold mb-6 animate-geometric-shift">
+      <div className="container relative z-20 mx-auto px-4 py-32 flex flex-col items-end text-right">
+        <span className="bg-artistic-orange px-4 py-1 rounded-md text-artistic-sand text-sm font-semibold mb-6 animate-geometric-shift">
           COACH SPORTIF À PARIS
         </span>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-3xl mb-6 text-artistic-sand artistic-title">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-2xl mb-6 text-artistic-sand artistic-title">
           REPRENEZ LE <span className="text-artistic-orange">CONTRÔLE</span>
         </h1>
-        <p className="text-xl md:text-2xl max-w-2xl mb-8 text-artistic-sand">
+        <p className="text-xl md:text-2xl max-w-xl mb-8 text-artistic-sand">
           Transformez votre physique et votre santé avec un coaching personnalisé
           adapté à vos objectifs et à votre niveau
         </p>

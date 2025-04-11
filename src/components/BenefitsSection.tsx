@@ -28,7 +28,7 @@ const BenefitsSection = () => {
     <section className="py-16 md:py-24 section-expressionist-1 textured-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 reveal">
-          <span className="inline-block bg-artistic-teal text-artistic-sand font-semibold mb-2 px-3 py-1 rounded-md">MES AVANTAGES</span>
+          <span className="inline-block bg-artistic-orange text-artistic-sand font-semibold mb-2 px-3 py-1 rounded-md">MES AVANTAGES</span>
           <h2 className="section-title artistic-title">Pourquoi me choisir</h2>
           <p className="section-subtitle">
             Un accompagnement sur mesure pour atteindre vos objectifs de manière durable
