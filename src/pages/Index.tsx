@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
@@ -8,6 +7,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import BenefitsSection from "../components/BenefitsSection";
 import BookingSection from "../components/BookingSection";
 import Footer from "../components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const Index = () => {
   // Référence pour le canvas de particules
@@ -31,40 +31,40 @@ const Index = () => {
 
     // Effet de parallaxe au mouvement de la souris
     const handleMouseMove = (e: MouseEvent) => {
-      const elements = document.querySelectorAll('.parallax-element');
+      const elements = document.querySelectorAll(".parallax-element");
       const mouseX = e.clientX / window.innerWidth;
       const mouseY = e.clientY / window.innerHeight;
-      
+
       elements.forEach((el) => {
         const element = el as HTMLElement;
-        const speed = parseFloat(element.getAttribute('data-speed') || '0.05');
+        const speed = parseFloat(element.getAttribute("data-speed") || "0.05");
         const x = (mouseX - 0.5) * speed * 100;
         const y = (mouseY - 0.5) * speed * 100;
-        
+
         element.style.transform = `translate(${x}px, ${y}px)`;
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     // Animation de l'arrière-plan du curseur
-    const cursorTrail = document.createElement('div');
-    cursorTrail.className = 'cursor-trail';
+    const cursorTrail = document.createElement("div");
+    cursorTrail.className = "cursor-trail";
     document.body.appendChild(cursorTrail);
 
     const handleCursorTrail = (e: MouseEvent) => {
       const x = e.clientX;
       const y = e.clientY;
-      cursorTrail.style.left = x + 'px';
-      cursorTrail.style.top = y + 'px';
+      cursorTrail.style.left = x + "px";
+      cursorTrail.style.top = y + "px";
     };
 
-    window.addEventListener('mousemove', handleCursorTrail);
+    window.addEventListener("mousemove", handleCursorTrail);
 
     return () => {
       revealElements.forEach((el) => observer.unobserve(el));
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mousemove', handleCursorTrail);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleCursorTrail);
       document.body.removeChild(cursorTrail);
     };
   }, []);
@@ -72,8 +72,11 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
       {/* Canvas pour les particules */}
-      <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-none opacity-20" />
-      
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 z-0 pointer-events-none opacity-20"
+      />
+
       <Header />
       <main>
         <HeroSection />
@@ -84,12 +87,21 @@ const Index = () => {
         <BookingSection />
       </main>
       <Footer />
-      
+
       {/* Éléments géométriques flottants pour l'effet artistique */}
-      <div className="fixed right-[10%] top-[15%] w-32 h-32 bg-artistic-teal/10 rounded-lg rotate-12 blur-xl z-0 parallax-element" data-speed="0.03"></div>
-      <div className="fixed left-[5%] bottom-[20%] w-40 h-40 bg-artistic-orange/10 rounded-lg -rotate-12 blur-xl z-0 parallax-element" data-speed="0.05"></div>
-      <div className="fixed right-[15%] bottom-[10%] w-24 h-24 bg-artistic-blue/10 rounded-lg rotate-45 blur-xl z-0 parallax-element" data-speed="0.04"></div>
-      
+      <div
+        className="fixed right-[10%] top-[15%] w-32 h-32 bg-artistic-teal/10 rounded-lg rotate-12 blur-xl z-0 parallax-element"
+        data-speed="0.03"
+      ></div>
+      <div
+        className="fixed left-[5%] bottom-[20%] w-40 h-40 bg-artistic-orange/10 rounded-lg -rotate-12 blur-xl z-0 parallax-element"
+        data-speed="0.05"
+      ></div>
+      <div
+        className="fixed right-[15%] bottom-[10%] w-24 h-24 bg-artistic-blue/10 rounded-lg rotate-45 blur-xl z-0 parallax-element"
+        data-speed="0.04"
+      ></div>
+
       {/* Using standard style tag instead of jsx style */}
       <style>
         {`
@@ -107,6 +119,7 @@ const Index = () => {
           }
         `}
       </style>
+      <Analytics />
     </div>
   );
 };
