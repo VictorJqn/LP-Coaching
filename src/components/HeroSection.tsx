@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background image with artistic pattern */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/7200454b-e672-42ef-ba44-64d3f55afb9c.png"
+          src="/hero-image.png"
           alt="TAKE CONTROL"
           className="w-full h-full object-cover object-center"
         />
