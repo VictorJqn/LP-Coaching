@@ -1,15 +1,16 @@
-
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">PARIS<span className="text-primary">FIT</span></h3>
+            <h3 className="text-lg font-bold mb-4">
+              PARIS<span className="text-primary">FIT</span>
+            </h3>
             <p className="text-gray-400 mb-4">
               Coaching sportif personnalisé à Paris. Transformez votre corps et
               améliorez votre santé avec un accompagnement professionnel.
@@ -45,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-primary" />
-                <span>contact@parisfit.fr</span>
+                <span>contact@thomasmartin.fr</span>
               </li>
               <li className="flex items-center">
                 <MapPin size={16} className="mr-2 text-primary" />
@@ -123,9 +124,13 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
-          <p>© {currentYear} PARISFIT - Thomas Martin, Coach sportif à Paris. Tous droits réservés.</p>
+          <p>
+            © {currentYear} Thomas Martin, Coach sportif à Paris. Tous droits
+            réservés.
+          </p>
           <p className="mt-2">
-            SIRET: 123 456 789 00012 | Diplômé STAPS | Certifié en nutrition sportive
+            SIRET: 123 456 789 00012 | Diplômé STAPS | Certifié en nutrition
+            sportive
           </p>
         </div>
       </div>

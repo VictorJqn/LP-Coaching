@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -37,15 +36,18 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? "bg-artistic-navy/90 backdrop-blur-lg py-2 shadow-lg shadow-artistic-blue/20" 
+        isScrolled
+          ? "bg-artistic-navy/90 backdrop-blur-lg py-2 shadow-lg shadow-artistic-blue/20"
           : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#home" className="font-display font-bold text-xl md:text-2xl text-artistic-sand">
-            PARIS<span className="text-artistic-orange">FIT</span>
+          <a
+            href="#home"
+            className="font-display font-bold text-xl md:text-2xl text-artistic-sand"
+          >
+            THOMAS<span className="text-artistic-orange ml-2">MARTIN</span>
           </a>
         </div>
 
@@ -72,11 +74,7 @@ const Header = () => {
             className="p-2 text-artistic-sand focus:outline-none"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <X size={24} />
-            ) : (
-              <Menu size={24} />
-            )}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -95,9 +93,9 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button 
-              className="btn-primary artistic-border w-full" 
-              onClick={() => setIsMobileMenuOpen(false)} 
+            <Button
+              className="btn-primary artistic-border w-full"
+              onClick={() => setIsMobileMenuOpen(false)}
               asChild
             >
               <a href="#booking">Réserver une séance gratuite</a>
